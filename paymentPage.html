@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Payment Page</h1>
+    <div id="paymentDetails"></div>
+
+    <script>
+        // Retrieve service and amount from local storage
+        const service = localStorage.getItem('service');
+        const amount = localStorage.getItem('amount');
+
+        // Display payment details
+        if (service && amount) {
+            document.getElementById('paymentDetails').innerHTML = `
+                <p>Service: ${service}</p>
+                <p>Amount: ₹${amount}</p>
+            `;
+        } else {
+            document.getElementById('paymentDetails').innerHTML = `
+                <p>No payment details found.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
