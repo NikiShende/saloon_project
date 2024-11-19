@@ -1,5 +1,6 @@
 // const db = require('../config/db');
 //random comment added
+// Random comment added 2
 // const massage = (req, res) => {
 //     const { massage_id, price } = req.query;
 
